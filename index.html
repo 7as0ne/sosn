@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تغيير أبعاد الشاشة</title>
+    <style>
+        /* تنسيق الشاشة الرئيسية */
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222; /* لون الخلفية الخارجي */
+        }
+
+        /* إعدادات الشاشة بحدود 1080x1080 */
+        .screen {
+            width: 1080px;
+            height: 1080px;
+            background-color: #333; /* لون الخلفية الداخلي */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            border: 1px solid #444;
+        }
+
+        /* إخفاء الشاشة في البداية */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="screen" class="screen hidden">
+        تم تفعيل وضع الشاشة 1080x1080
+    </div>
+
+    <script>
+        // عند الضغط على الشاشة، يتم إظهار الشاشة 1080x1080
+        document.body.addEventListener('click', function() {
+            const screenDiv = document.getElementById('screen');
+            screenDiv.classList.toggle('hidden'); // تفعيل أو إلغاء تفعيل العرض
+        });
+    </script>
+</body>
+</html>
